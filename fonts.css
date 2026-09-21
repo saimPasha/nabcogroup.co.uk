@@ -1,0 +1,6 @@
+/* NABCO webfonts - Google Fonts CDN.
+   IBM Plex Sans = Latin text, UI and headings · IBM Plex Sans Arabic = ALL Arabic ·
+   IBM Plex Mono = specs, figures, reference numbers.
+   The NABCO / نابكو wordmarks are outlined artwork and need no font. */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+:root { --font-sans-loaded: "IBM Plex Sans"; --font-arabic-loaded: "IBM Plex Sans Arabic"; }

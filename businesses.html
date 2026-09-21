@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nabco-design-system-106fd923-e14e-474c-a7a3-d40a6af723fb/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/nabco-design-system-106fd923-e14e-474c-a7a3-d40a6af723fb/tokens/tokens.css">
+<link rel="stylesheet" href="_ds/nabco-design-system-106fd923-e14e-474c-a7a3-d40a6af723fb/tokens/base.css">
+<link rel="stylesheet" href="_ds/nabco-design-system-106fd923-e14e-474c-a7a3-d40a6af723fb/tokens/components.css">
+<link rel="stylesheet" href="_ds/nabco-design-system-106fd923-e14e-474c-a7a3-d40a6af723fb/styles.css">
+<script src="_ds/nabco-design-system-106fd923-e14e-474c-a7a3-d40a6af723fb/_ds_bundle.js"></script>
+<title>Businesses — NABCO logistics in Jeddah, e-commerce in preparation</title>
+<style>
+  body { margin: 0; background: var(--nabco-sand); }
+  a { color: var(--nabco-navy); }
+  a:hover { color: var(--navy-600); }
+  .lang-btn:hover { color: var(--nabco-gold); }
+</style>
+</helmet>
+
+<div style="font-family: var(--font-sans); color: var(--nabco-navy); background: var(--nabco-sand);">
+
+  <sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+  <div style="background: var(--navy-900); color: #FFFFFF;">
+    <div class="container-site" style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-2); font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase;">
+      <span style="color: var(--navy-200);">London — Jeddah</span>
+      <span style="display: flex; align-items: center; gap: var(--space-3);">
+        <span style="color: var(--nabco-gold);">EN</span>
+        <span style="color: var(--navy-600);">/</span>
+        <button class="lang-btn" onClick="{{ toAr }}" style="background: none; border: 0; padding: 0; cursor: pointer; font-family: var(--font-arabic); font-size: 0.8125rem; color: #FFFFFF;">العربية</button>
+      </span>
+    </div>
+  </div>
+  </sc-if>
+  <sc-if value="{{ isAr }}" hint-placeholder-val="{{ false }}">
+  <div dir="rtl" style="background: var(--navy-900); color: #FFFFFF;">
+    <div class="container-site" style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-block: var(--space-2); font-family: var(--font-arabic); font-size: 0.8125rem;">
+      <span style="color: var(--navy-200);">لندن — جدة</span>
+      <span style="display: flex; align-items: center; gap: var(--space-3);">
+        <span style="color: var(--nabco-gold);">العربية</span>
+        <span style="color: var(--navy-600);">/</span>
+        <button class="lang-btn" onClick="{{ toEn }}" style="background: none; border: 0; padding: 0; cursor: pointer; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; color: #FFFFFF;">EN</button>
+      </span>
+    </div>
+  </div>
+  </sc-if>
+
+  <header style="border-bottom: 1px solid var(--sand-300); background: var(--nabco-sand);">
+    <div class="container-site" style="display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-8); padding-block: var(--space-5); flex-wrap: wrap;">
+      <a href="index.html" style="display: block; line-height: 0;">
+        <x-import component-from-global-scope="NABCODesignSystem_106fd9.Logo" variant="compact" height="{{ 36 }}" hint-size="240px,36px"></x-import>
+      </a>
+      <nav style="display: flex; align-items: center; gap: var(--space-8); flex-wrap: wrap; font-size: var(--size-xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">
+        <a href="businesses.html" aria-current="page" style="text-decoration: none; border-bottom: 3px solid var(--nabco-gold); padding-bottom: 2px;">Businesses</a>
+        <a href="about.html" style="text-decoration: none;">About</a>
+        <a href="careers.html" style="text-decoration: none;">Careers</a>
+        <a href="contact.html" style="text-decoration: none;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <sc-if value="{{ isAr }}" hint-placeholder-val="{{ false }}">
+    <section style="background: var(--nabco-sand);">
+      <div class="container-site" style="padding-block: clamp(3rem, 8vw, 6rem); display: flex; flex-direction: column; gap: var(--space-5); align-items: flex-start;">
+        <span style="white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-ink); background: var(--nabco-gold); padding: 3px var(--space-2);">Awaiting translation</span>
+        <p dir="rtl" style="margin: 0; font-family: var(--font-arabic); font-size: 1.35rem; line-height: 1.75; color: var(--nabco-navy); max-width: 46ch;">النسخة العربية من صفحة "أعمالنا" بانتظار اعتماد النص العربي. سيُكتب المحتوى بالعربية مباشرة، لا ترجمة حرفية.</p>
+        <button class="lang-btn" onClick="{{ toEn }}" style="background: none; border: 1px solid var(--nabco-navy); padding: var(--space-3) var(--space-5); cursor: pointer; white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-navy);">Back to English</button>
+      </div>
+    </section>
+  </sc-if>
+
+<sc-if value="{{ isEn }}" hint-placeholder-val="{{ true }}">
+<div>
+  <section style="background: var(--nabco-navy); color: #FFFFFF;">
+    <div class="container-site on-dark" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(2rem, 5vw, 5rem); align-items: end; padding-block: clamp(3.5rem, 8vw, 6.5rem);">
+      <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+        <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-gold);">Businesses</p>
+        <h1 style="margin: 0; font-size: clamp(2.1rem, 4.2vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; color: #FFFFFF; max-width: 16ch; text-wrap: balance;">One operation today, a second in preparation</h1>
+        <div style="width: 96px; height: 4px; background: var(--nabco-gold);"></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--space-4); font-family: var(--font-mono); font-size: var(--size-sm); letter-spacing: 0.14em; text-transform: uppercase;">
+        <a href="#logistics" style="display: flex; align-items: baseline; gap: var(--space-5); padding-bottom: var(--space-4); border-bottom: 1px solid var(--navy-600); text-decoration: none; color: #FFFFFF;"><span style="color: var(--nabco-gold);">01</span> Logistics <span style="margin-inline-start: auto; font-size: var(--size-2xs); color: var(--navy-200);">Operating</span></a>
+        <a href="#ecommerce" style="display: flex; align-items: baseline; gap: var(--space-5); padding-bottom: var(--space-4); border-bottom: 1px solid var(--navy-600); text-decoration: none; color: #FFFFFF;"><span style="color: var(--nabco-gold);">02</span> E-commerce <span style="margin-inline-start: auto; font-size: var(--size-2xs); color: var(--navy-200);">In preparation</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="logistics" style="background: var(--nabco-sand); border-bottom: 1px solid var(--sand-300);">
+    <div class="container-site" style="padding-block: clamp(3rem, 6vw, 5rem); display: flex; flex-direction: column; gap: clamp(2.5rem, 5vw, 4rem);">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(2rem, 4vw, 4rem); align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-800);">01 — Logistics</p>
+          <h2 style="margin: 0; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; max-width: 14ch; text-wrap: balance;">Last-mile delivery across Jeddah</h2>
+        </div>
+        <p style="margin: 0; font-size: clamp(1.05rem, 1.4vw, 1.25rem); line-height: 1.8; color: var(--sand-700); max-width: 52ch; text-wrap: pretty;">NABCO's logistics operation runs a fleet of delivery vehicles across Jeddah, providing reliable last-mile delivery for platform partners and business clients.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-8);">
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); border-top: 4px solid var(--nabco-gold); padding-top: var(--space-5);">
+          <h3 style="margin: 0; font-size: var(--size-lg); font-weight: 700; letter-spacing: -0.02em;">Fleet operations and dispatch</h3>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); border-top: 4px solid var(--nabco-gold); padding-top: var(--space-5);">
+          <h3 style="margin: 0; font-size: var(--size-lg); font-weight: 700; letter-spacing: -0.02em;">Driver recruitment, training and management</h3>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-3); border-top: 4px solid var(--nabco-gold); padding-top: var(--space-5);">
+          <h3 style="margin: 0; font-size: var(--size-lg); font-weight: 700; letter-spacing: -0.02em;">Scheduled and on-demand delivery for delivery-platform and business partners</h3>
+        </div>
+      </div>
+
+      <div class="card-strike" style="--strike-cut: 44px; background: #FFFFFF; border: 1px solid var(--sand-300); padding: clamp(1.5rem, 3vw, 2.5rem); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6) clamp(2rem, 4vw, 4rem); align-items: start;">
+        <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-800);">Technology</p>
+        <p style="margin: 0; font-size: var(--size-lg); line-height: 1.8; color: var(--sand-700); max-width: 56ch; text-wrap: pretty;">Our fleet and back-office are run on a modern ERP system, giving us real-time visibility into operations, driver performance, and delivery reliability.</p>
+      </div>
+
+      <div style="border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); padding: clamp(1.5rem, 3vw, 2rem); display: flex; flex-direction: column; gap: var(--space-5);">
+        <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+          <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-800);">Scale</p>
+          <span style="white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-ink); background: var(--nabco-gold); padding: 3px var(--space-2);">Needs client input</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6);">
+          <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <span style="font-family: var(--font-mono); font-size: var(--size-3xl); color: var(--sand-500);">—</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-sm); color: var(--sand-600);">Vehicles in fleet — to confirm</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <span style="font-family: var(--font-mono); font-size: var(--size-3xl); color: var(--sand-500);">—</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-sm); color: var(--sand-600);">Drivers — to confirm</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+            <span style="font-family: var(--font-mono); font-size: var(--size-3xl); color: var(--sand-500);">—</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-sm); color: var(--sand-600);">Monthly deliveries — to confirm</span>
+          </div>
+        </div>
+        <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--sand-600);">No estimated figures will be published. Real counts required.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+          <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-800);">Partners</p>
+          <span style="white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-ink); background: var(--nabco-gold); padding: 3px var(--space-2);">Logos awaited</span>
+        </div>
+        <p style="margin: 0; font-size: var(--size-lg); line-height: 1.8; color: var(--sand-700); max-width: 58ch;">Client-confirmed logistics and platform partners.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-4);">
+          <div style="border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); min-height: 104px; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: var(--space-4);">
+            <span style="font-size: var(--size-base); font-weight: 600;">Keeta</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand-600);">Logo to be supplied</span>
+          </div>
+          <div style="border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); min-height: 104px; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: var(--space-4);">
+            <span style="font-size: var(--size-base); font-weight: 600;">HungerStation</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand-600);">Logo to be supplied</span>
+          </div>
+          <div style="border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); min-height: 104px; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: var(--space-4);">
+            <span style="font-size: var(--size-base); font-weight: 600;">Jahez</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand-600);">Logo to be supplied</span>
+          </div>
+          <div style="border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); min-height: 104px; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: var(--space-4);">
+            <span style="font-size: var(--size-base); font-weight: 600;">Amazon</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand-600);">Logo to be supplied</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); color: var(--gold-800);">Relationship wording to confirm</span>
+          </div>
+          <div style="border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); min-height: 104px; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: var(--space-4);">
+            <span style="font-size: var(--size-base); font-weight: 600;">Noon</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand-600);">Logo to be supplied</span>
+            <span style="font-family: var(--font-mono); font-size: var(--size-2xs); color: var(--gold-800);">Relationship wording to confirm</span>
+          </div>
+        </div>
+        <p style="margin: 0; border-inline-start: 4px solid var(--nabco-gold); padding-inline-start: var(--space-4); font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--sand-700); max-width: 68ch;">Query for client: Amazon and Noon are e-commerce platforms rather than delivery apps like Keeta, HungerStation and Jahez. Confirm the exact relationship wording — delivery partner vs. sells-through — before final copy ships.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+        <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+          <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-800);">Operations photography</p>
+          <span style="white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-ink); background: var(--nabco-gold); padding: 3px var(--space-2);">Awaiting assets</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4);">
+          <figure style="margin: 0; border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); aspect-ratio: 4 / 3; display: flex; align-items: flex-end; padding: var(--space-5); font-family: var(--font-mono); font-size: var(--size-sm); color: var(--sand-600);">Vehicles — photo to supply</figure>
+          <figure style="margin: 0; border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); aspect-ratio: 4 / 3; display: flex; align-items: flex-end; padding: var(--space-5); font-family: var(--font-mono); font-size: var(--size-sm); color: var(--sand-600);">Dispatch operations — photo to supply</figure>
+          <figure style="margin: 0; border: 1px dashed var(--sand-500); background: repeating-linear-gradient(93deg, rgba(16,64,96,0.05) 0 2px, transparent 2px 14px); aspect-ratio: 4 / 3; display: flex; align-items: flex-end; padding: var(--space-5); font-family: var(--font-mono); font-size: var(--size-sm); color: var(--sand-600);">Premises — photo to supply</figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecommerce" style="background: var(--nabco-navy); color: #FFFFFF;">
+    <div class="container-site on-dark" style="padding-block: clamp(3rem, 6vw, 5rem); display: flex; flex-direction: column; gap: clamp(2rem, 4vw, 3rem);">
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(2rem, 4vw, 4rem); align-items: start;">
+        <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-gold);">02 — E-commerce</p>
+          <h2 style="margin: 0; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; color: #FFFFFF; max-width: 14ch; text-wrap: balance;">An expansion in preparation</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-4); align-items: flex-start;">
+          <span style="white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-ink); background: var(--nabco-gold); padding: 3px var(--space-2);">Section not ready to publish</span>
+          <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200); max-width: 54ch;">Every row below is unanswered. This section either gets real answers or is omitted at launch — nothing here will ship as written.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-5);">
+        <div style="border: 1px dashed var(--navy-400); background: rgba(1,27,47,0.4); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3);">
+          <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-gold);">Status</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-lg); color: #FFFFFF;">“Launching [window]”</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200);">Needs a real target window, or the section is omitted until one exists.</span>
+        </div>
+        <div style="border: 1px dashed var(--navy-400); background: rgba(1,27,47,0.4); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3);">
+          <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-gold);">Category</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-lg); color: #FFFFFF;">To confirm</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200);">The product category NABCO will actually sell.</span>
+        </div>
+        <div style="border: 1px dashed var(--navy-400); background: rgba(1,27,47,0.4); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3);">
+          <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-gold);">Market</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-lg); color: #FFFFFF;">To confirm</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200);">KSA domestic, UK to KSA, or other.</span>
+        </div>
+        <div style="border: 1px dashed var(--navy-400); background: rgba(1,27,47,0.4); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3);">
+          <span style="font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-gold);">Model</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-lg); color: #FFFFFF;">To confirm</span>
+          <span style="font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200);">Own store or marketplace.</span>
+        </div>
+      </div>
+
+      <div style="border: 1px dashed var(--navy-400); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-3);">
+        <span style="align-self: flex-start; white-space: nowrap; font-family: var(--font-mono); font-size: var(--size-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--nabco-ink); background: var(--nabco-gold); padding: 3px var(--space-2);">Draft — hold</span>
+        <p style="margin: 0; font-family: var(--font-mono); font-size: clamp(1rem, 1.4vw, 1.25rem); line-height: 1.8; color: #FFFFFF; max-width: 58ch;">“Backed by the same fleet that powers our logistics business, our e-commerce operation will be built for fast, reliable delivery from day one.”</p>
+        <p style="margin: 0; font-family: var(--font-mono); font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200);">Logistics link — to be drafted properly once status, category, market and model are answered.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--nabco-sand); border-top: 1px solid var(--sand-300);">
+    <div class="container-site" style="padding-block: clamp(3rem, 6vw, 5rem); display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-8);">
+      <h2 style="margin: 0; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; max-width: 20ch; text-wrap: balance;">Work with our fleet</h2>
+      <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+        <x-import component-from-global-scope="NABCODesignSystem_106fd9.Button" variant="primary" href="contact.html" hint-size="140px,44px">Get in touch</x-import>
+        <x-import component-from-global-scope="NABCODesignSystem_106fd9.Button" variant="secondary" href="about.html" hint-size="140px,44px">About NABCO</x-import>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+  <footer style="background: var(--navy-900); color: #FFFFFF;">
+    <div class="container-site on-dark" style="padding-block: var(--space-10); display: flex; flex-wrap: wrap; gap: var(--space-8); align-items: center; justify-content: space-between;">
+      <x-import component-from-global-scope="NABCODesignSystem_106fd9.Logo" variant="compact" tone="reverse" height="{{ 32 }}" hint-size="220px,32px"></x-import>
+      <p style="margin: 0; font-size: var(--size-sm); line-height: 1.8; color: var(--navy-200);">NABCO<br>London · Jeddah</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;ar&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;\&quot;en\&quot; | \&quot;ar\&quot;&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { lang: null };
+  renderVals() {
+    const lang = this.state.lang ?? (this.props.lang ?? "en");
+    return {
+      isEn: lang === "en",
+      isAr: lang === "ar",
+      toEn: () => this.setState({ lang: "en" }),
+      toAr: () => this.setState({ lang: "ar" })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* NABCO base */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--surface-page); color: var(--text-secondary); font-family: var(--font-sans);
+  font-size: var(--size-base); line-height: var(--leading-normal); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { color: var(--text-primary); font-family: var(--font-sans); font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight); line-height: var(--leading-snug); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: var(--text-link); text-underline-offset: 3px; }
+:where(a, button, input, select, textarea, [tabindex]):focus-visible { outline: none; box-shadow: var(--focus-ring); }
+:lang(ar), [dir="rtl"] { font-family: var(--font-arabic); }
+[dir="rtl"] .icon-directional { transform: scaleX(-1); }
+.nabco-logo, .no-mirror { transform: none !important; }   /* the mark never mirrors */
+.mono, code { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; } }

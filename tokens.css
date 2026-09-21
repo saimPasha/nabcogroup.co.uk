@@ -1,0 +1,148 @@
+/* NABCO design tokens. Generated from D:/NABCO/Brand-System/_src (gen_tokens.py).
+   Brand: NABCO · Al Nukhba Al Barraq Company · شركة النخبة البراق */
+:root {
+  /* ---- brand, locked ---- */
+  --nabco-navy: #104060;   /* primary: ink, grounds, structure */
+  --nabco-gold: #F2C230;   /* accent only: rules, fills, speed lines. NEVER text on light */
+  --nabco-sand: #F7F4EF;   /* primary light ground */
+  --nabco-ink: #111111;    /* mono print, max-contrast text */
+  --nabco-white: #FFFFFF;
+
+  /* ---- ramps (OKLCH, perceptually even) ---- */
+  --navy-50: #F2F6FA;
+  --navy-100: #DCE8F2;
+  --navy-200: #BDD4E6;
+  --navy-300: #94B6D1;
+  --navy-400: #6791B3;
+  --navy-500: #406E91;
+  --navy-600: #255476;
+  --navy-700: #104060;
+  --navy-800: #062E48;
+  --navy-900: #011B2F;
+  --navy-950: #000F1C;
+  --gold-50: #FCF6E9;
+  --gold-100: #FAECC9;
+  --gold-200: #F7DD9C;
+  --gold-300: #F5D06F;
+  --gold-400: #F3C649;
+  --gold-500: #F2C230;
+  --gold-600: #D3A400;
+  --gold-700: #B18500;
+  --gold-800: #8B6500;
+  --gold-900: #664800;
+  --sand-25: #FEFCFA;
+  --sand-50: #FAF7F3;
+  --sand-100: #F7F4EF;
+  --sand-200: #EBE7E1;
+  --sand-300: #D8D4CC;
+  --sand-400: #B5B0A8;
+  --sand-500: #908B84;
+  --sand-600: #6C6862;
+  --sand-700: #4D4A45;
+  --sand-800: #302D2A;
+  --sand-900: #1A1917;
+
+  /* ---- division accents: sub-brands only, never inside the logo ---- */
+  --accent-marine: #007B7C;
+  --accent-palm: #257B51;
+  --accent-copper: #99542E;
+  --accent-clay: #9B4D59;
+  --accent-indigo: #5E61A4;
+  --accent-amethyst: #775899;
+
+  /* ---- surfaces ---- */
+  --surface-page: var(--sand-100);
+  --surface-card: #FFFFFF;
+  --surface-sunken: var(--sand-200);
+  --surface-subtle: var(--navy-50);
+  --surface-inverse: var(--nabco-navy);
+  --surface-deep: var(--navy-900);
+  --surface-accent: var(--nabco-gold);
+
+  /* ---- text ---- */
+  --text-primary: var(--nabco-navy);
+  --text-secondary: var(--sand-700);
+  --text-muted: var(--sand-600);
+  --text-disabled: var(--sand-400);
+  --text-link: var(--nabco-navy);
+  --text-gold-safe: var(--gold-800);        /* the only gold allowed as type on light */
+  --text-on-inverse: #FFFFFF;
+  --text-on-inverse-muted: var(--navy-200);
+  --text-accent-on-dark: var(--nabco-gold);
+  --text-on-gold: var(--nabco-ink);
+
+  /* ---- borders & rules ---- */
+  --border-subtle: var(--sand-300);
+  --border-default: var(--sand-400);
+  --border-strong: var(--navy-300);
+  --border-brand: var(--nabco-navy);
+  --border-inverse: rgba(255, 255, 255, 0.18);
+  --rule-accent: var(--nabco-gold);
+
+  /* ---- status: functional only ---- */
+  --success: #298646; --success-bg: #E0F8E4; --success-border: #ADE0B6; --success-text: #00642A;
+  --warning: #DD9314; --warning-bg: #FFECD2; --warning-border: #F6C88F; --warning-text: #803F00;
+  --danger: #BA3630; --danger-bg: #FFE5DF; --danger-border: #FFB7AD; --danger-text: #981919;
+  --info: #1A7AA9; --info-bg: #DDF4FF; --info-border: #A8D9F7; --info-text: #005A84;
+
+  /* ---- geometry: both measured off the logo. No other angle exists. ---- */
+  --angle-rake: 3deg;     /* velocity: speed lines, patterns, shallow edges */
+  --angle-strike: 52deg;  /* the bolt stroke: panel cuts, chevrons, corners */
+
+  /* ---- type ---- */
+  --font-sans: var(--font-sans-loaded), "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --font-arabic: var(--font-arabic-loaded), "IBM Plex Sans Arabic", "Noto Sans Arabic", Tahoma, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --size-2xs: 0.6875rem; --size-xs: 0.75rem; --size-sm: 0.875rem; --size-base: 1rem;
+  --size-lg: 1.125rem; --size-xl: 1.25rem; --size-2xl: 1.5rem; --size-3xl: 2rem;
+  --size-4xl: 2.5rem; --size-5xl: 3rem; --size-6xl: 4rem;
+  --leading-tight: 1.1; --leading-snug: 1.2; --leading-normal: 1.6; --leading-relaxed: 1.7;
+  --tracking-tight: -0.02em; --tracking-normal: 0; --tracking-wide: 0.04em; --tracking-widest: 0.14em;
+  --weight-regular: 400; --weight-medium: 500; --weight-semibold: 600; --weight-bold: 700;
+  --ar-size-multiplier: 1.08;
+
+  /* ---- space, layout ---- */
+  --space-0: 0; --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --max-site: 1240px; --max-prose: 66ch;
+
+  /* ---- radius: the brand's corner is the 52deg cut, not the round corner ---- */
+  --radius-none: 0; --radius-sm: 2px; --radius-md: 4px; --radius-lg: 8px; --radius-full: 9999px;
+  --strike-cut: 22px;     /* corner-cut size; height = cut x tan(52deg) */
+
+  /* ---- elevation: navy-tinted, never neutral black ---- */
+  --shadow-xs: 0 1px 2px rgba(6, 46, 72, 0.06);
+  --shadow-card: 0 2px 8px rgba(6, 46, 72, 0.10), 0 1px 2px rgba(6, 46, 72, 0.06);
+  --shadow-hover: 0 8px 24px rgba(6, 46, 72, 0.14), 0 2px 6px rgba(6, 46, 72, 0.08);
+  --shadow-pop: 0 16px 48px rgba(6, 46, 72, 0.18), 0 4px 12px rgba(6, 46, 72, 0.10);
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 4px var(--navy-600);
+
+  /* ---- motion: always left to right ---- */
+  --ease-strike: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-rake: cubic-bezier(0.4, 0, 0.1, 1);
+  --ease-settle: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-fast: 150ms; --dur-base: 200ms; --dur-slow: 320ms; --dur-enter: 560ms;
+}
+
+/* Dark grounds: gold becomes the action colour, because navy-on-navy has no contrast. */
+.on-dark, [data-theme="dark"] {
+  --text-primary: #FFFFFF;
+  --text-secondary: var(--navy-200);
+  --text-muted: var(--navy-300);
+  --text-link: var(--nabco-gold);
+  --border-subtle: var(--navy-800);
+  --border-default: var(--navy-600);
+  --border-brand: var(--nabco-gold);
+  --focus-ring: 0 0 0 2px var(--navy-900), 0 0 0 4px var(--nabco-gold);
+}
+
+/* Arabic: larger, looser, never tracked. The logo never mirrors. */
+[dir="rtl"] {
+  --font-sans: var(--font-arabic);
+  --leading-tight: 1.35;
+  --leading-normal: 1.75;
+  --tracking-tight: 0;
+  --tracking-wide: 0;
+  --tracking-widest: 0;
+}

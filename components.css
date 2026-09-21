@@ -1,0 +1,77 @@
+/* NABCO component classes. Angular by design: small radii, strike-cut corners, gold rules. */
+.container-site { max-width: var(--max-site); margin-inline: auto; width: 100%; padding-inline: var(--space-6); }
+.section { padding-block: var(--space-20); }
+.section-sm { padding-block: var(--space-12); }
+
+/* ---- buttons ---- */
+.btn-primary, .btn-accent, .btn-secondary, .btn-ghost, .btn-inverse {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  font-family: var(--font-sans); font-size: var(--size-sm); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-wide);
+  padding: var(--space-3) var(--space-6); border-radius: var(--radius-sm); border: 2px solid transparent;
+  cursor: pointer; text-decoration: none; line-height: 1.2;
+  transition: background-color var(--dur-base) var(--ease-settle), color var(--dur-base) var(--ease-settle), border-color var(--dur-base) var(--ease-settle); }
+[class*="btn-"]:disabled, [class*="btn-"][aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+.btn-sm { padding: var(--space-2) var(--space-4); font-size: var(--size-xs); }
+.btn-lg { padding: var(--space-4) var(--space-8); font-size: var(--size-base); }
+.btn-primary { background: var(--nabco-navy); color: #FFFFFF; }
+.btn-primary:hover { background: var(--navy-600); }
+.btn-accent { background: var(--nabco-gold); color: var(--text-on-gold); }            /* ink on gold, 11.3:1 */
+.btn-accent:hover { background: var(--gold-400); }
+.btn-secondary { background: transparent; color: var(--nabco-navy); border-color: var(--nabco-navy); }
+.btn-secondary:hover { background: var(--nabco-navy); color: #FFFFFF; }
+.btn-ghost { background: transparent; color: var(--text-link); padding-inline: var(--space-2); }
+.btn-ghost:hover { text-decoration: underline; }
+.btn-inverse { background: var(--nabco-gold); color: var(--nabco-navy); }             /* on navy grounds only */
+.btn-inverse:hover { background: var(--gold-300); }
+
+/* ---- cards ---- */
+.card { background: var(--surface-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);
+  padding: var(--space-6); box-shadow: var(--shadow-card); transition: box-shadow var(--dur-slow) var(--ease-settle), border-color var(--dur-slow) var(--ease-settle); }
+.card-interactive:hover { box-shadow: var(--shadow-hover); border-color: var(--border-brand); }
+.card-quiet { background: var(--surface-sunken); border-color: transparent; box-shadow: none; }
+.card-inverse { background: var(--surface-inverse); color: var(--text-on-inverse); border-color: transparent; box-shadow: none; }
+.card-inverse :is(h1,h2,h3,h4,h5,h6) { color: #FFFFFF; }
+/* strike-cut corner: the top-right corner is cut at exactly 52deg */
+.card-strike { clip-path: polygon(0 0, calc(100% - var(--strike-cut)) 0, 100% calc(var(--strike-cut) * 1.2799), 100% 100%, 0 100%); }
+
+/* ---- section header: the gold charge rule from the lockup opens it ---- */
+.section-label, .section-label-inverse { display: flex; align-items: center; gap: var(--space-3);
+  font-family: var(--font-sans); font-size: var(--size-xs); font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--text-gold-safe); margin: 0 0 var(--space-3); }
+.section-label::before, .section-label-inverse::before { content: ""; width: 4px; height: 1.15em; background: var(--rule-accent); flex: none; }
+.section-label-inverse { color: var(--nabco-gold); }
+.section-title { font-size: var(--size-4xl); line-height: var(--leading-snug); font-weight: var(--weight-bold); color: var(--text-primary); margin: 0 0 var(--space-4); }
+.section-subtitle { font-size: var(--size-lg); line-height: var(--leading-relaxed); color: var(--text-secondary); max-width: 42rem; }
+.charge-rule { display: inline-block; width: 4px; align-self: stretch; background: var(--rule-accent); }
+
+/* ---- stat ---- */
+.stat-number { font-family: var(--font-sans); font-size: var(--size-4xl); font-weight: var(--weight-bold); line-height: var(--leading-tight);
+  color: var(--text-primary); letter-spacing: var(--tracking-tight); font-variant-numeric: tabular-nums; }
+.stat-label { font-size: var(--size-sm); color: var(--text-muted); }
+.stat-inverse .stat-number { color: #FFFFFF; }
+.stat-inverse .stat-label { color: var(--text-on-inverse-muted); }
+
+/* ---- badge ---- */
+.badge { display: inline-flex; align-items: center; gap: var(--space-1); font-size: var(--size-xs); font-weight: var(--weight-semibold);
+  padding: 2px var(--space-2); border-radius: var(--radius-sm); border: 1px solid var(--info-border); background: var(--info-bg); color: var(--info-text); }
+.badge-success { background: var(--success-bg); color: var(--success-text); border-color: var(--success-border); }
+.badge-warning { background: var(--warning-bg); color: var(--warning-text); border-color: var(--warning-border); }
+.badge-danger { background: var(--danger-bg); color: var(--danger-text); border-color: var(--danger-border); }
+.badge-neutral { background: var(--surface-sunken); color: var(--text-secondary); border-color: var(--border-subtle); }
+
+/* ---- field ---- */
+.field-label { display: block; font-size: var(--size-sm); font-weight: var(--weight-medium); color: var(--text-primary); margin-bottom: var(--space-2); }
+.field-input { width: 100%; font-family: var(--font-sans); font-size: var(--size-base); color: var(--text-primary); background: var(--surface-card);
+  border: 1px solid var(--border-default); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);
+  transition: border-color var(--dur-fast) var(--ease-settle), box-shadow var(--dur-fast) var(--ease-settle); }
+.field-input::placeholder { color: var(--text-disabled); }
+.field-input:focus { outline: none; border-color: var(--border-brand); box-shadow: var(--focus-ring); }
+.field-input[aria-invalid="true"] { border-color: var(--danger); }
+.field-hint { font-size: var(--size-sm); color: var(--text-muted); margin-top: var(--space-1); }
+.field-error { font-size: var(--size-sm); color: var(--danger-text); margin-top: var(--space-1); }
+
+/* ---- velocity field: the logo's speed lines as a ground texture (8-12% opacity) ---- */
+.velocity-field { position: relative; isolation: isolate; }
+.velocity-field::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: var(--velocity-opacity, 0.1);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22400%22%20height%3D%22200%22%20viewBox%3D%220%200%20400%20200%22%3E%3Cpolygon%20points%3D%22332.36%2C0.75%2030%2C20%20326.82%2C7.85%22%20fill%3D%22%23F2C230%22/%3E%3Cpolygon%20points%3D%22361.56%2C46.65%20150%2C60%20357.87%2C51.37%22%20fill%3D%22%23F2C230%22/%3E%3Cpolygon%20points%3D%22342.92%2C77.87%200%2C100%20336.15%2C86.54%22%20fill%3D%22%23F2C230%22/%3E%3Cpolygon%20points%3D%22351.33%2C130.18%20200%2C140%20348.26%2C134.12%22%20fill%3D%22%23F2C230%22/%3E%3Cpolygon%20points%3D%22342.11%2C163.24%2080%2C180%20337.18%2C169.54%22%20fill%3D%22%23F2C230%22/%3E%3C/svg%3E"); background-size: 400px 200px; transform: rotate(calc(-1 * var(--angle-rake))) scale(1.15); }
+.velocity-field.velocity-navy::before { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22400%22%20height%3D%22200%22%20viewBox%3D%220%200%20400%20200%22%3E%3Cpolygon%20points%3D%22332.36%2C0.75%2030%2C20%20326.82%2C7.85%22%20fill%3D%22%23104060%22/%3E%3Cpolygon%20points%3D%22361.56%2C46.65%20150%2C60%20357.87%2C51.37%22%20fill%3D%22%23104060%22/%3E%3Cpolygon%20points%3D%22342.92%2C77.87%200%2C100%20336.15%2C86.54%22%20fill%3D%22%23104060%22/%3E%3Cpolygon%20points%3D%22351.33%2C130.18%20200%2C140%20348.26%2C134.12%22%20fill%3D%22%23104060%22/%3E%3Cpolygon%20points%3D%22342.11%2C163.24%2080%2C180%20337.18%2C169.54%22%20fill%3D%22%23104060%22/%3E%3C/svg%3E"); }
