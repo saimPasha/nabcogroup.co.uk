@@ -1,7 +1,7 @@
 /* @ds-bundle: {"format":4,"namespace":"NABCODesignSystem_106fd9","components":[{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"VelocityField","sourcePath":"components/brand/VelocityField.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"Field","sourcePath":"components/core/Field.jsx"},{"name":"SectionHeader","sourcePath":"components/core/SectionHeader.jsx"},{"name":"Stat","sourcePath":"components/core/Stat.jsx"}],"sourceHashes":{"components/brand/Logo.jsx":"cf0bc183f9ac","components/brand/VelocityField.jsx":"56942596199f","components/core/Badge.jsx":"2872d48c401b","components/core/Button.jsx":"b55502076fe7","components/core/Card.jsx":"eea3a9df958a","components/core/Field.jsx":"1a07ebc3365f","components/core/SectionHeader.jsx":"a0dbd2d955c6","components/core/Stat.jsx":"fa2c0cb8a428"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
-
+//v2
 const __ds_ns = (window.NABCODesignSystem_106fd9 = window.NABCODesignSystem_106fd9 || {});
 
 const __ds_scope = {};
